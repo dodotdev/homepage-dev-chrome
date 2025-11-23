@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Package files
+*.zip
+*.crx
+*.pem
+
+# Build
+dist/
+build/
+
+# Node (if tooling added later)
+node_modules/
