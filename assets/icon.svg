@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Blue background with rounded corners -->
+  <rect width="512" height="512" rx="96" fill="#2563eb"/>
+
+  <!-- Dashboard/layout icon - white stroked -->
+  <g transform="translate(128, 128)" fill="none" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer rectangle -->
+    <rect x="0" y="0" width="256" height="256" rx="16"/>
+
+    <!-- Horizontal line (top bar separator) -->
+    <line x1="0" y1="64" x2="256" y2="64"/>
+
+    <!-- Vertical line (sidebar separator) -->
+    <line x1="80" y1="64" x2="80" y2="256"/>
+  </g>
+</svg>

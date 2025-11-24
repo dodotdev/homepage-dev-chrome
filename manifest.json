@@ -11,8 +11,7 @@
   ],
   "host_permissions": [
     "https://homepage.dev/*",
-    "https://*.homepage.dev/*",
-    "<all_urls>"
+    "https://*.homepage.dev/*"
   ],
   "background": {
     "service_worker": "background.js"
