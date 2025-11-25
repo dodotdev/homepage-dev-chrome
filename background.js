@@ -3,8 +3,8 @@
  * Service Worker for handling extension icon clicks
  */
 
-// Toggle for development vs production
-const DEV_MODE = false;
+// Auto-detect dev mode: unpacked extensions don't have update_url in manifest
+const DEV_MODE = !chrome.runtime.getManifest().update_url;
 const HOMEPAGE_BASE_URL = DEV_MODE ? 'http://localhost:3017' : 'https://homepage.dev';
 const ADD_BOOKMARK_PATH = '/add';
 const DASHBOARD_PATH = '/a/me';
@@ -29,7 +29,7 @@ function buildAddBookmarkUrl(metadata) {
     image: metadata.image || '',
     favicon: metadata.favicon || '',
     source: 'extension',
-    v: '0.3.1',
+    v: '0.3.2',
     timestamp: Date.now().toString()
   });
 

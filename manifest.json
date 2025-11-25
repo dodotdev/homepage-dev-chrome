@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Homepage.dev - New Tab",
   "short_name": "Homepage.dev",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Transform new tabs into your homepage.dev dashboard - instant access to your personalized developer homepage.",
   "permissions": [
     "tabs",
