@@ -14,7 +14,7 @@ const DASHBOARD_PATH = '/a/me';
  */
 const POPUP_CONFIG = {
   width: 600,
-  height: 760,
+  height: 775,
   type: 'popup'
 };
 
@@ -29,7 +29,7 @@ function buildAddBookmarkUrl(metadata) {
     image: metadata.image || '',
     favicon: metadata.favicon || '',
     source: 'extension',
-    v: '0.3',
+    v: '0.3.1',
     timestamp: Date.now().toString()
   });
 
