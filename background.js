@@ -3,8 +3,8 @@
  * Service Worker for handling extension icon clicks
  */
 
-// Auto-detect dev mode: unpacked extensions don't have update_url in manifest
-const DEV_MODE = !chrome.runtime.getManifest().update_url;
+// Set to true for local development, false for production
+const DEV_MODE = false;
 const HOMEPAGE_BASE_URL = DEV_MODE ? 'http://localhost:3017' : 'https://homepage.dev';
 const ADD_BOOKMARK_PATH = '/add';
 const DASHBOARD_PATH = '/a/me';
@@ -19,6 +19,18 @@ const POPUP_CONFIG = {
 };
 
 /**
+ * Handle extension installation - show onboarding page
+ */
+chrome.runtime.onInstalled.addListener((details) => {
+  if (details.reason === 'install') {
+    // Open onboarding page on first install
+    chrome.tabs.create({
+      url: 'onboarding.html'
+    });
+  }
+});
+
+/**
  * Build the add bookmark URL with page metadata
  */
 function buildAddBookmarkUrl(metadata) {
@@ -29,7 +41,7 @@ function buildAddBookmarkUrl(metadata) {
     image: metadata.image || '',
     favicon: metadata.favicon || '',
     source: 'extension',
-    v: '0.3.2',
+    v: '0.3.4',
     timestamp: Date.now().toString()
   });
 
